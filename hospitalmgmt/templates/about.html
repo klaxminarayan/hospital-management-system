@@ -1,0 +1,38 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+<div class="bg-img">
+  <div class="container" style="margin-top: 25px;">
+    <h2 class="text-center">About Us</h2>
+    <br><br><br>
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <img src="{% static 'images/about-us.jpeg' %}" alt="about-us-image" width="300" height="200"
+          class="img-fluid  rounded">
+      </div>
+      <div class="col-sm-8  font-weight-bold ">
+        <p class="text-white bg-dark" style="border-radius: 10px;">
+          <br> Hello Friends.... <br>
+          This is a website for Hospital Management System made using Django, HTML, CSS, Javascript.
+          In this website adminstrator can check the number of appointments and the availabity of doctors.
+          It can able to manage the doctor-patient relationship with ease any in a simple and effective way.
+          <br> <br>
+        </p>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="card">
+      <div class="card-header">
+        Quote of the Day
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>An apple a day keeps the doctor away, But if the doctor is cute forget the fruit. The best doctor gives the
+            least medicines.</p>
+          <footer class="blockquote-footer">Qoute By WHO</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

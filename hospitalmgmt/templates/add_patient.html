@@ -1,0 +1,43 @@
+{% extends 'navigationbar.html' %}
+{% load static %}
+{% block body %}
+<div class="bg-img">
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+    <h1 class="text-center"> <i class="fas fa-angle-double-down"></i> Add Patients</h1>
+</div>
+<div class="container" style="margin-top: 25px;">
+
+    <br>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Patient Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Patient Name" required />
+        <label>Age</label>
+        <input type="number" class="form-control" name="age" placeholder="Enter Patient Age" required />
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" />Male
+        <input type="radio" name="gender" value="female" />Female
+        <br>
+        <label>Contact</label>
+        <input type="number" class="form-control" name="contact" placeholder="" required />
+        <label>Address</label>
+        <textarea class="form-control" name="address" placeholder="Enter Address of the patient" required></textarea>
+        <br />
+        <input type="submit" value="Submit" class="form-control btn btn-primary" />
+    </form>
+</div>
+{%ifequal error "no" %}
+<script>
+    alert('Record Saved Successfully');
+    window.location = ('{% url 'view_patient' %}');
+</script>
+{% endifequal %}
+{% ifequal error "yes" %}
+<script>
+    alert("Something Went wrong, Try Again");
+</script>
+{% endifequal %}
+
+{% endblock %}

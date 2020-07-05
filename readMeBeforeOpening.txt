@@ -34,10 +34,3 @@ Procedure:
 13. Navigate to this url http://127.0.0.1:8000 and start using the website on your local server.
 
 14. If required then buy a domain and host on the wwebserver.
-
-
-
-Login Credentials:
-Username: admin
-Password: laxmi
-
